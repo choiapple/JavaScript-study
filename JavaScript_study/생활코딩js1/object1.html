@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!--<ul>
+        <script type="text/javascript">
+            var grades = {'egoing':10, 'k8805':6, 'sorialgi':80};
+            for(key in grades){
+                document.write("<li>key : "+key+" value : "+grades[key]+"</li>");
+            }
+        </script>
+    </ul>-->
+    <script type="text/javascript">
+    var grades = {
+        'list' : {'egoing':10, 'k8805':6, 'sorialgi':80},
+        'show' : function(){
+            for(var name in this.list){
+                document.write(name+':'+this.list[name]+"<br />");
+            }
+        }
+    }; //함수가 담길 수 있고 다른 리스트가 담길 수 있다.
+    grades.show();
+    </script>
+
+</body>
+</html>

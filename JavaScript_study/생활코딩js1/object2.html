@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // object.keys()
+        var arr = ["a", "b", "c"];
+        console.log('object.keys(arr)', object.keys(arr)); // will alert
+        // "0, 1, 2"
+        // object.prototype.toString()
+        var o = new object();
+        console.log('o.toString()', o.toString());
+
+        // toString은 어떤 객체의 값들이나 객체의 상태를 사람이 보기 편하게 출력해줌
+
+        var a = new Array(1, 2, 3);
+        console.log('a.toString()', a.toString());
+
+        // .keys()와 .prototype.toString()의 차이 
+        // .keys()는 object.keys(arr)로 값을 받고
+        // .prototype.toString()은 객체를 만들어서 거기다가 o.toString()하는거임
+        // object는 생성자 함수
+        // object.keys = function{} 
+        // object.prototype.toString = function(){} 객체를 만든다
+        // prototype에 정의해서 object는 부모이기 때문에 자식들이 쓸수있는거임
+        // object는 조상객체이므로 모든객체들은 prototype에 있는 것들쓸수있음
+    </script>
+</body>
+</html>

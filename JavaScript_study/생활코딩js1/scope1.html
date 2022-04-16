@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        (function(){
+            var MYAPP = {}
+            MYAPP.calculator = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.coordinate = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+            function sum(){
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+        }()) // 전역변수를 사용하고 싶지않을때 이렇게 익명함수를 쓰면된다.
+    </script>
+</body>
+</html>
+<!-- 정적유효범위 : 사용될때 정해지는게 아니라 정의될 때 정해짐 값이 
+자바스크립트는 함수가 선언된 시점에서의 유효범위를 갖는다. 이러한 유효범위의 방식을 정적 유효범위(static scoping), 
+혹은 렉시컬(lexical scoping)이라고 한다. -->

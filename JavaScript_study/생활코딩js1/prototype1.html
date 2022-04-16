@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        Super.prototype = new Ultra();
+
+        function Sub(){}
+        Sub.prototype = new Super();
+
+        var o = new Sub();
+        console.log(o.ultraProp);
+        // new를 사용해줘야함 아니면 자식에 추가한 내용이 부모에게도 변화가 생기므로
+    </script>
+</body>
+</html>

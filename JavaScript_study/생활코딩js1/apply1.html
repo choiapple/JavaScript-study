@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        // function sum(){
+        //     var _sum = 0;
+        //     for(name in this){
+        //         if(typeof this[name] != 'function')
+        //             _sum += this[name];
+        //     }
+        //     return _sum;
+        // }
+        // o1 = {val1:1, val2:2, val3:3, sum:sum}
+        // o2 = {v1:10, v2:50, v3:100, v4:25, sum:sum}
+        // alert(o1.sum());
+        // alert(o2.sum());
+        // 번거로움 이방법 그래서 아래방법을 씀
+        o1 = {val1:1, val2:2, val3:3}
+        o2 = {v1:10, v2:50, v3:100, v4:25}
+        function sum(){
+            var _sum = 0;
+            for(name in this){
+                _sum += this[name];
+            }
+            return _sum;
+        }
+        alert(sum.apply(o1)) // 6
+        alert(sum.apply(o2)) // 185
+        // 위 두개와 같은 결과가 나옴
+        // 위에꺼 보다 덜 번거로우니 이걸 씀
+    </script>
+    
+</body>
+</html>

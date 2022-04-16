@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Function</h1>
+        <h2>Basic</h2>
+        <ul>
+            <script>
+                function two(){
+                    document.write('<li>2-1</li>');
+                    document.write('<li>2-2</li>');
+                }
+                document.write('<li>1</li>');
+                two();
+                document.write('<li>3</li>');
+                two();
+            </script>
+        </ul>
+        <h2>Parameter & Argument</h2>
+        <script>
+            function onePlusone(){
+                document.write(1+1);
+                document.write('<br>');
+            }
+            onePlusone();
+            function sum(left, right){ // left, right는 parameter 매개변수라함
+                document.write(left + right + '<br>');
+            }
+            function sumColorRed(left, right){ 
+                document.write('<div style="color:red">'+(left + right) + '</div>');
+            }
+            sum(2,3); // 5 2,3은 argument인자라함
+            sumColorRed(5,6);
+            sum(3,4); // 7
+        </script>
+        <h2>Return</h2>
+        <script>
+            function sum2(left, right){
+                return left + right;
+            }
+            document.write(sum2(2,3)+'<br>');
+            document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+            document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+
+        </script>
+    </body>
+</html>

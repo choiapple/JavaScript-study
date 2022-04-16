@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name){
+            this.name = namel;
+            this.introduce = function(){
+                return 'My name is ' + this.name;
+            }
+        }
+        var p1 = new Person('egoing');
+        document.write(p1.introduce() + "<br />");
+
+        var p2 = new Person('leezche');
+        document.write(p2.introduce() + "<br />");
+        // 여기서 생성자가 하는거 객체에 대한 초기화의 역할을 가지고 있다.
+    </script>
+
+</body>
+</html>

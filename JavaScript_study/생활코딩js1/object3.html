@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        object.prototype.contain = function(needle){
+            for(var name in this){
+                if(this[name] === needle){
+                    return true;
+                }
+            }
+            return false;
+        }
+        var o = {'name':'egoing', 'city':'seoul'}
+        console.log(o.contain('egoing'));
+        var a = ['egoing', 'leezche', 'grapittie'];
+        console.log(a.contain('leezche'));
+        // prototype 추가 방법이었다.
+        // 모든객체에 영향을 주기때문에 신중해야한다.
+        // for in문에서 name만 나오는게 아니라 contain도 같이나오는거임
+        for(var name in o){
+            if(o.hasOwnProperty(name)){
+                console.log(name);
+            }
+        }
+        // 이거하면 contain안나오고 name들만 나옴
+        // hasOwnProperty사용하면 인자로 전달된 속성의 이름이 객체의 속성인지 판단 
+        // 만약 property으로 상속 받은 객체라면 false가 된다.
+        // in은 상속받은거 hasOwnProperty이건 자신이 직접가지고있는것
+    </script>
+</body>
+</html>
